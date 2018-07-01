@@ -1,1 +1,5 @@
 version: 1
+builds:
+  unit-tests:
+    commitStatus: awsbuild/unit-tests
+    timeoutInMinutes: 15
