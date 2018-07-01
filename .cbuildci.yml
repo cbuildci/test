@@ -1,4 +1,9 @@
 version: 1
+
+defaults:
+#  stopIfNotBranchHead: false
+  image: 'aws/codebuild/docker:17.09.0'
+
 builds:
   unit-tests:
     commitStatus: awsbuild/unit-tests
