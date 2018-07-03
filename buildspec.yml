@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - echo install
-      - sleep 300
+      - sleep 600
       - false
   pre_build:
     commands:
