@@ -2,7 +2,7 @@ version: 1
 
 defaults:
 #  stopIfNotBranchHead: false
-  image: 'aws/codebuild/docker:17.09.0'
+  image: 'aws/codebuild/nodejs:8.11.0'
 
 builds:
   lint:
@@ -16,3 +16,4 @@ builds:
       - unit-tests
     commitStatus: awsbuild/integration-tests
     timeoutInMinutes: 15
+    image: 'aws/codebuild/docker:17.09.0'
