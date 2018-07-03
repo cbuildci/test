@@ -3,20 +3,16 @@ phases:
   install:
     commands:
       - echo install
-      - sleep 600
-      - false
+      - sleep $SLEEP_TIME
   pre_build:
     commands:
       - echo pre_build
-      - false
   build:
     commands:
       - echo build
-      - false
   post_build:
     commands:
       - echo post_build
-      - false
 artifacts:
   files: '**/*'
   base-directory: artifacts
