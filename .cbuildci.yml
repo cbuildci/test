@@ -5,6 +5,12 @@ defaults:
   image: 'aws/codebuild/docker:17.09.0'
 
 builds:
+  lint:
+    commitStatus: awsbuild/linting
+    timeoutInMinutes: 15
   unit-tests:
     commitStatus: awsbuild/unit-tests
+    timeoutInMinutes: 15
+  integration-tests:
+    commitStatus: awsbuild/integration-tests
     timeoutInMinutes: 15
