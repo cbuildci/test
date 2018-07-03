@@ -6,19 +6,19 @@ defaults:
   image: 'aws/codebuild/nodejs:8.11.0'
   environmentVariables:
     - name: SLEEP_TIME
-      value: 30
+      value: "30"
 
 builds:
   lint-quick:
     commitStatus: awsbuild/linting
     environmentVariables:
       - name: SLEEP_TIME
-        value: 5
+        value: "5"
   lint:
     commitStatus: awsbuild/linting
     environmentVariables:
       - name: SLEEP_TIME
-        value: 60
+        value: "60"
   unit-tests:
     commitStatus: awsbuild/unit-tests
     timeoutInMinutes: 5
