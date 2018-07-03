@@ -2,12 +2,23 @@ version: 1
 
 defaults:
 #  stopIfNotBranchHead: false
+  timeoutInMinutes: 10
   image: 'aws/codebuild/nodejs:8.11.0'
+  environmentVariables:
+    - name: SLEEP_TIME
+      value: 30
 
 builds:
+  lint-quick:
+    commitStatus: awsbuild/linting
+    environmentVariables:
+      - name: SLEEP_TIME
+        value: 5
   lint:
     commitStatus: awsbuild/linting
-    timeoutInMinutes: 15
+    environmentVariables:
+      - name: SLEEP_TIME
+        value: 60
   unit-tests:
     commitStatus: awsbuild/unit-tests
     timeoutInMinutes: 5
@@ -15,5 +26,5 @@ builds:
     dependsOn:
       - unit-tests
     commitStatus: awsbuild/integration-tests
-    timeoutInMinutes: 15
     image: 'aws/codebuild/docker:17.09.0'
+    timeoutInMinutes: true
