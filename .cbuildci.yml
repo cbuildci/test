@@ -12,5 +12,7 @@ builds:
     commitStatus: awsbuild/unit-tests
     timeoutInMinutes: 15
   integration-tests:
+    dependsOn:
+      - unit-tests
     commitStatus: awsbuild/integration-tests
     timeoutInMinutes: 15
