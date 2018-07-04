@@ -10,12 +10,12 @@ defaults:
 
 builds:
   lint-quick:
-    commitStatus: awsbuild/linting
+    commitStatus: awsbuild/linting-quick
     environmentVariables:
       - name: SLEEP_TIME
         value: "5"
   lint:
-    commitStatus: awsbuild/linting
+    commitStatus: awsbuild/linting-slow
     environmentVariables:
       - name: SLEEP_TIME
         value: "60"
