@@ -1,4 +1,4 @@
-versionX: 1
+version: 5
 
 defaults:
 #  stopIfNotBranchHead: false
