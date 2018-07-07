@@ -1,4 +1,4 @@
-version: 5
+version: 1
 
 defaults:
 #  stopIfNotBranchHead: false
@@ -21,7 +21,7 @@ builds:
         value: "60"
   unit-tests:
     commitStatus: awsbuild/unit-tests
-    timeoutInMinutes: 5
+    timeoutInMinutes: alpha
   integration-tests:
     dependsOn:
       - unit-tests
