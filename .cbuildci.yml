@@ -24,7 +24,7 @@ builds:
     timeoutInMinutes: 5
   integration-tests:
     dependsOn:
-      - unit-testsx
+      - unit-tests
     commitStatus: awsbuild/integration-tests
     image: 'aws/codebuild/docker:17.09.0'
     privilegedMode: true
