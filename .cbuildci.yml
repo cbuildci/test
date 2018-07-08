@@ -10,6 +10,7 @@ defaults:
 
 builds:
   lint-quick:
+    codeBuildProjectArn: 'arn:aws:codebuild:us-east-1:493678911134:project/cbuildci-build-2'
     commitStatus: awsbuild/linting-quick
     environmentVariables:
       - name: SLEEP_TIME
