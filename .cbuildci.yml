@@ -41,3 +41,5 @@ builds:
     environmentVariables:
       - name: FAIL
         value: "Y"
+      - name: SLEEP_TIME
+        value: "60"
