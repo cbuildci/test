@@ -43,3 +43,8 @@ builds:
         value: "Y"
       - name: SLEEP_TIME
         value: "60"
+
+  failed-tests:
+    dependsOn:
+      - final-tests
+      - failed-tests
