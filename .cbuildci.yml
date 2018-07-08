@@ -44,7 +44,7 @@ builds:
       - name: SLEEP_TIME
         value: "60"
 
-  failed-tests:
+  failed-dep:
     dependsOn:
       - final-tests
       - failed-tests
