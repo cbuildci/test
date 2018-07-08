@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - echo build
-      - '[ "$FAIL" != "" ] && /bin/false || /bin/true'
+      - '[ "$FAIL" == "" ] && /bin/true || /bin/false'
   post_build:
     commands:
       - echo post_build
