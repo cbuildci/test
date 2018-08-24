@@ -3,8 +3,10 @@ phases:
   install:
     commands:
       - echo install
-      - sleep $SLEEP_TIME
+      - echo npm config get cache --local
+      - echo npm config get cache --system
       - echo npm config get cache --global
+      - sleep $SLEEP_TIME
   pre_build:
     commands:
       - echo pre_build
