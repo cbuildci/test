@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo build
-      - echo Foobar1 > artifacts/builda.dat
+      - echo Foobar1 > builda.dat
       - echo Foobar2 > artifacts/buildb.dat
       - echo Foobar3 > artifacts/buildc.dat
   post_build:
