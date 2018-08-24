@@ -10,6 +10,7 @@ phases:
   build:
     commands:
       - echo build
+      - echo Foobar > build.dat
   post_build:
     commands:
       - echo post_build
