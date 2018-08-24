@@ -1,0 +1,50 @@
+version: 1
+
+defaults:
+#  stopIfNotBranchHead: false
+  timeoutInMinutes: 10
+  image: 'aws/codebuild/nodejs:8.11.0'
+  environmentVariables:
+    - name: SLEEP_TIME
+      value: "5"
+
+builds:
+  lint-quick:
+    codeBuildProjectArn: 'arn:aws:codebuild:us-east-1:493678911134:project/cbuildci-build-1'
+    commitStatus: awsbuild/linting-quick
+    environmentVariables:
+      - name: SLEEP_TIME
+        value: "5"
+
+  lint:
+    commitStatus: awsbuild/linting-slow
+    environmentVariables:
+      - name: SLEEP_TIME
+        value: "5"
+
+  unit-tests:
+    commitStatus: awsbuild/unit-tests
+    timeoutInMinutes: 5
+
+  integration-tests:
+    dependsOn:
+      - unit-tests
+    commitStatus: awsbuild/integration-tests
+    image: 'aws/codebuild/docker:17.09.0'
+    privilegedMode: true
+
+  final-tests:
+    dependsOn:
+      - integration-tests
+
+  failed-tests:
+    environmentVariables:
+      - name: FAIL
+        value: "Y"
+      - name: SLEEP_TIME
+        value: "60"
+
+  failed-dep:
+    dependsOn:
+      - final-tests
+      - failed-tests
