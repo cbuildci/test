@@ -7,10 +7,13 @@ phases:
   pre_build:
     commands:
       - echo pre_build
+      - mkdir artifacts
   build:
     commands:
       - echo build
-      - echo Foobar > build.dat
+      - echo Foobar1 > artifacts/builda.dat
+      - echo Foobar2 > artifacts/buildb.dat
+      - echo Foobar3 > artifacts/buildc.dat
   post_build:
     commands:
       - echo post_build
