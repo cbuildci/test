@@ -6,6 +6,8 @@ phases:
       - npm config get cache --local
       - npm config get cache --system
       - npm config get cache --global
+      - pwd
+      - ls
       - sleep $SLEEP_TIME
   pre_build:
     commands:
