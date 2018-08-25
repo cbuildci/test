@@ -21,7 +21,7 @@ phases:
     commands:
       - echo post_build
 cache:
-  paths: '/root/.npm'
+  paths: '/root/.npm/**/*'
 artifacts:
   files: '**/*'
   base-directory: artifacts
