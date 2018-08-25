@@ -4,7 +4,7 @@ phases:
     commands:
       - echo install
       - ls /root/.npm || true
-      - npm install --offline
+      - npm install --cache-min=9999
       - ls /root/.npm || true
   pre_build:
     commands:
