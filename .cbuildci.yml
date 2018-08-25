@@ -4,6 +4,7 @@ defaults:
 #  stopIfNotBranchHead: false
   timeoutInMinutes: 10
   image: 'aws/codebuild/nodejs:8.11.0'
+  useCache: true
   environmentVariables:
     - name: SLEEP_TIME
       value: "10"
