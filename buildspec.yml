@@ -4,13 +4,8 @@ phases:
     commands:
       - echo install
       - env
-      - npm config get cache --local
-      - npm config get cache --system
-      - npm config get cache --global
-      - pwd
-      - ls
-      - du -sh `npm config get cache --global`
-      - sleep $SLEEP_TIME
+      - ls /root/.npm
+      - npm install
   pre_build:
     commands:
       - echo pre_build
@@ -24,6 +19,8 @@ phases:
   post_build:
     commands:
       - echo post_build
+cache:
+  paths: '/root/.npm'
 artifacts:
   files: '**/*'
   base-directory: artifacts
