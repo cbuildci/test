@@ -4,12 +4,11 @@ phases:
     commands:
       - echo install
       - ls /root/.npm || true
-      - npm install
+      - time npm install
       - ls /root/.npm || true
   pre_build:
     commands:
       - echo pre_build
-      - env
       - mkdir artifacts
   build:
     commands:
