@@ -1,7 +1,7 @@
 version: 1
 
 defaults:
-  timeoutInMinutes: 2
+  timeoutInMinutes: 5
   image: 'aws/codebuild/nodejs:8.11.0'
 
 builds:
