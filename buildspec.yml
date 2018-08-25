@@ -3,9 +3,9 @@ phases:
   install:
     commands:
       - echo install
-      - [ -d /root/.npm ] && ls /root/.npm || true
+      - ls /root/.npm || true
       - npm install
-      - [ -d /root/.npm ] && ls /root/.npm || true
+      - ls /root/.npm || true
   pre_build:
     commands:
       - echo pre_build
