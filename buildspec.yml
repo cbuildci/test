@@ -3,12 +3,13 @@ phases:
   install:
     commands:
       - echo install
-      - env
-      - ls /root/.npm
+      - [ -d /root/.npm ] && ls /root/.npm || true
       - npm install
+      - [ -d /root/.npm ] && ls /root/.npm || true
   pre_build:
     commands:
       - echo pre_build
+      - env
       - mkdir artifacts
   build:
     commands:
