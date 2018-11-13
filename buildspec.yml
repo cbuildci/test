@@ -3,12 +3,18 @@ phases:
   install:
     commands:
       - echo install
+      - sleep $SLEEP_TIME
   pre_build:
     commands:
       - echo pre_build
   build:
     commands:
       - echo build
+      - "bash -c '[ \"$FAIL\" == \"\" ]'"
   post_build:
     commands:
       - echo post_build
+#artifacts:
+#  files: '**/*'
+#  base-directory: artifacts
+# foobar
