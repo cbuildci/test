@@ -1,5 +1,6 @@
 'use strict';
 
+// This is a boring function
 exports.getFoobar = getFoobar;
 function getFoobar() {
 	return 'foobar';
