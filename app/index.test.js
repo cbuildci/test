@@ -12,8 +12,8 @@ describe('index', () => {
 
 	describe('getBar', () => {
 		it('should return "bar"', () => {
-			// expect(index.getBar())
-			// 	.toEqual('bar');
+			expect(index.getBar())
+				.toEqual('bar');
 		})
 	});
 });
