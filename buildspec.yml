@@ -2,13 +2,20 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo install
-  pre_build:
-    commands:
-      - echo pre_build
+      - npm install --cache-min=9999
+      - mkdir artifacts
+      - mkdir build
   build:
     commands:
-      - echo build
+      - npm run -s build
+      - tar -zcf build/app.tar.gz app/*.js
   post_build:
     commands:
-      - echo post_build
+      - mv build artifacts
+cache:
+  paths:
+    - '/root/.npm/**/*'
+    - 'node_modules/**/*'
+artifacts:
+  files: '**/*'
+  base-directory: artifacts

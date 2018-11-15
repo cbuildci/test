@@ -1,8 +1,7 @@
 version: 1
 
-defaults:
-  timeoutInMinutes: 2
-  image: 'aws/codebuild/nodejs:8.11.0'
-
 builds:
-  lint:
+  build:
+    timeoutInMinutes: 5
+    image: 'aws/codebuild/nodejs:8.11.0'
+    useCache: true

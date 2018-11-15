@@ -1,0 +1,33 @@
+{
+    "name": "brownbag",
+    "version": "1.0.0",
+    "description": "TODO",
+    "author": "André Mekkawi <github@andremekkawi.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "npm run lint && npm run test",
+        "lint": "eslint --max-warnings 0 app/*.js",
+        "test": "jest --coverage"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "app/*.js"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "statements": 98,
+                "branches": 91,
+                "functions": 98,
+                "lines": 98
+            }
+        },
+        "moduleDirectories": [
+            "node_modules"
+        ],
+        "testRegex": ".*\\.test\\.js$"
+    },
+    "dependencies": {
+        "eslint": "^4.19.1",
+        "jest-cli": "^23.5.0"
+    }
+}
